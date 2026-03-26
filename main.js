@@ -87,47 +87,47 @@ const material = new THREE.MeshStandardMaterial({
 });
 
 // Create multiple floating nuts for a cooler background effect
-const nuts = [];
-const numNuts = window.innerWidth > 768 ? 5 : 3;
+// Map deterministic non-colliding positions for 3D elements
+const nutConfigs = window.innerWidth > 768 ? [
+    { x: 12, y: 2, z: -5, scale: 1.5, speed: 0.08 }, // Hero (Right center)
+    { x: -18, y: 15, z: -15, scale: 0.8, speed: 0.04 }, // Top Left
+    { x: 18, y: -12, z: -10, scale: 0.9, speed: 0.05 }, // Bottom Right
+    { x: -14, y: -16, z: -8, scale: 1.1, speed: 0.06 }, // Bottom Left
+    { x: 22, y: 18, z: -20, scale: 1.2, speed: 0.03 }   // Far Top Right
+] : [
+    { x: 0, y: 2, z: -5, scale: 1.2, speed: 0.08 }, // Hero (Center)
+    { x: -10, y: -15, z: -12, scale: 0.8, speed: 0.05 }, // Bottom Left
+    { x: 10, y: 15, z: -15, scale: 0.9, speed: 0.04 }    // Top Right
+];
 
-for(let i=0; i<numNuts; i++) {
+const nuts = [];
+
+for(let i=0; i<nutConfigs.length; i++) {
+    const config = nutConfigs[i];
     const mesh = new THREE.Mesh(geometry, material);
     
-    // Random initial positions spread out
-    mesh.position.x = (Math.random() - 0.5) * 40;
-    mesh.position.y = (Math.random() - 0.5) * 40;
-    mesh.position.z = (Math.random() - 0.5) * 20 - 10;
+    // Set position safely apart
+    mesh.position.set(config.x, config.y, config.z);
     
-    // Random initial rotations
+    // Set random initial rotations
     mesh.rotation.x = Math.random() * Math.PI;
     mesh.rotation.y = Math.random() * Math.PI;
     
     // Scale variation
-    const scale = Math.random() * 0.5 + 0.5;
-    mesh.scale.set(scale, scale, scale);
+    mesh.scale.set(config.scale, config.scale, config.scale);
     
     // Store original data for animation math
     mesh.userData = {
-        baseX: mesh.position.x,
-        baseY: mesh.position.y,
-        baseZ: mesh.position.z,
-        rotSpeedX: (Math.random() - 0.5) * 0.01,
-        rotSpeedY: (Math.random() - 0.5) * 0.01,
-        scrollSpeedFactor: Math.random() * 0.05 + 0.02
+        baseX: config.x,
+        baseY: config.y,
+        baseZ: config.z,
+        rotSpeedX: (Math.random() - 0.5) * 0.015,
+        rotSpeedY: (Math.random() - 0.5) * 0.015,
+        scrollSpeedFactor: config.speed
     };
     
     scene.add(mesh);
     nuts.push(mesh);
-}
-
-// Make the first nut the "Hero" nut, larger and more central
-if(nuts.length > 0) {
-    const heroNut = nuts[0];
-    heroNut.position.set(8, 0, -5);
-    heroNut.scale.set(1.5, 1.5, 1.5);
-    heroNut.userData.baseX = window.innerWidth > 768 ? 12 : 0; // Offset to right on desktop
-    heroNut.userData.baseY = 2;
-    heroNut.userData.scrollSpeedFactor = 0.08;
 }
 
 // --- Lighting ---
