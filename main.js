@@ -95,9 +95,10 @@ const nutConfigs = window.innerWidth > 768 ? [
     { x: -14, y: -16, z: -8, scale: 1.1, speed: 0.06 }, // Bottom Left
     { x: 22, y: 18, z: -20, scale: 1.2, speed: 0.03 }   // Far Top Right
 ] : [
-    { x: 0, y: 2, z: -5, scale: 1.2, speed: 0.08 }, // Hero (Center)
-    { x: -10, y: -15, z: -12, scale: 0.8, speed: 0.05 }, // Bottom Left
-    { x: 10, y: 15, z: -15, scale: 0.9, speed: 0.04 }    // Top Right
+    { x: 4, y: 10, z: -10, scale: 0.8, speed: 0.05 }, // Top Right
+    { x: -5, y: 2, z: -12, scale: 0.6, speed: 0.04 }, // Mid Left
+    { x: 3, y: -8, z: -8, scale: 0.9, speed: 0.07 }, // Bottom Right
+    { x: -3, y: -16, z: -15, scale: 0.7, speed: 0.03 } // Far Bottom Left
 ];
 
 const nuts = [];
