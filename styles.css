@@ -462,6 +462,21 @@ a {
     min-width: 200px;
 }
 
+.map-container {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
 .icon {
     font-size: 1.5rem;
     background: rgba(245, 158, 11, 0.1);
