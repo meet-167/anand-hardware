@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Hardware Agency | Premium Industrial Fasteners</title>
+    <meta name="description" content="Well-reputed trader, wholesaler and supplier of High Tensile Fasteners, Special Bolts, Automobile Bolts, and more. Established in 1972 in Ahmedabad.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Three.js (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Overlay content to ensure canvas stays in background -->
+    <div class="content-wrapper">
+        
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <span class="logo-text">ANAND</span>
+                    <span class="logo-subtext">HARDWARE</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#quality">Quality</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="est-badge">Established 1972 • Ahmedabad</p>
+                <h1 class="hero-title">Engineering <br><span class="highlight">Strength.</span><br>Delivering <span class="highlight">Trust.</span></h1>
+                <p class="hero-subtitle">Premier wholesaler and supplier of high-tensile bolt fasteners, self-clinching fasteners, special bolts, and industrial hardware components.</p>
+                <div class="cta-group">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <p>Scroll to Explore</p>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="about-text glass-panel center-panel">
+                    <h2 class="section-heading">Over Five Decades of <br>Uncompromising Quality.</h2>
+                    <p>Incorporated in 1972 at Ahmedabad (Gujarat, India), <strong>Anand Hardware Agency</strong> has built a lasting reputation as a trusted trader, wholesaler, and supplier of industrial hardware.</p>
+                    <p>Our client-centric business approach, ethical practices, timely delivery schedules, and competitive pricing policy have helped us in garnering a huge client base across the nation. Over the years, we have maintained cordial and strong relationships with our customers, always striving to deliver optimum functionality and durability.</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Quality Assured</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Pan-India</h3>
+                            <p>Network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-heading">Our Specialised Products</h2>
+                    <p class="section-subtext">Precision engineered hardware sourced from industry-leading vendors to meet the most demanding international standards.</p>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/EP/QJ/MY-8023888/high-tensile-flange-bolts-500x500.jpeg" alt="High Tensile Bolts" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>High Tensile Bolts</h3>
+                            <p>Available in various shapes, sizes, and thicknesses for superior dimensional accuracy and corrosion resistance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/AV/UD/MY-8023888/flange-nut-collar-nut-500x500.jpg" alt="High Tensile Nuts" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>High Tensile Nuts</h3>
+                            <p>Flange nuts, collar nuts, assembly nuts, and nylock nuts manufactured for extended durability and sturdy construction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/BD/MU/MY-8023888/power-steering-bolt-500x500.jpg" alt="Automobile Bolts" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Automobile Bolts</h3>
+                            <p>Comprehensive range including power steering bolts, crank pulley bolts, and camshaft bolts customized to exact specifications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/WK/DO/MY-8023888/connecting-rod-bolt-cr-500x500.jpg" alt="Special Bolts" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Special Bolts</h3>
+                            <p>Premium customized special fasteners recognized for excellent finish and robust architecture for diverse industrial applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/XT/NQ/MY-8023888/plain-washers-500x500.jpg" alt="Metal Washers" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Metal Washers</h3>
+                            <p>Plain, spring, and lock washers crafted from stainless steel, duplex steel, and titanium for optimum fitting precision.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card glass-panel">
+                        <div class="product-image">
+                            <img src="https://3.imimg.com/data3/HT/XF/MY-8023888/rubber-hose-500x500.jpg" alt="Rubber Hoses" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Rubber Hoses</h3>
+                            <p>Highly resilient rubber hoses and parts manufactured using advanced technology under strict quality controls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality & Vendors Section -->
+        <section id="quality" class="quality section-padding">
+            <div class="container">
+                <div class="quality-text glass-panel center-panel">
+                    <h2 class="section-heading">World-Class Vendor Base.<br>Rigorous Quality Control.</h2>
+                    <p>We source our products exclusively from recognized and trusted vendors elected through rigorous parameters: economic stability, manufacturing excellence, and market credibility.</p>
+                    <ul class="quality-list">
+                        <li><strong>International Standards:</strong> Compliance with strict global norms for all sourced materials.</li>
+                        <li><strong>Expert Curators:</strong> An adroit team of knowledgeable professionals continually evaluating market trends.</li>
+                        <li><strong>Dedicated Controllers:</strong> Intensive multi-parameter testing to guarantee flawless operations and longevity of our products.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info glass-panel">
+                        <h2 class="section-heading">Connect with Us.</h2>
+                        <p class="section-subtext">Ready to experience industry-leading quality and service? Get in touch today for quotes and inquiries.</p>
+                        
+                        <div class="info-blocks">
+                            <div class="info-item">
+                                <div class="icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+919375001998" class="contact-link">+91 9375001998</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">📍</div>
+                                <div>
+                                    <h4>Corporate Office</h4>
+                                    <p>Ahmedabad - 382210<br>Gujarat, India</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">🌐</div>
+                                <div>
+                                    <h4>IndiaMart Profile</h4>
+                                    <p><a href="https://www.indiamart.com/anandhardwareagency/profile.html" target="_blank" rel="noopener noreferrer" class="contact-link">Visit our verified profile</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <h2>Anand Hardware Agency</h2>
+                    <p>Engineering Strength since 1972</p>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Anand Hardware Agency. All rights reserved.</p>
+                    <p>Designed for excellence.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
